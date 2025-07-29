@@ -1,0 +1,120 @@
+---
+sidebar: sidebar 
+permalink: task_cluster_expansion_contraction.html 
+keywords: cluster, expand, expansion, contract, contraction, six, eight, node deployment workflow, workflow, deployment steps 
+summary: Ab ONTAP Select 9.15.1 können Sie die Größe eines vorhandenen Clusters von sechs auf acht Knoten erhöhen und die Clustergröße von acht auf sechs Knoten verringern. 
+---
+= Erweitern oder verkleinern Sie einen ONTAP Select Cluster
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ab ONTAP Select 9.15.1 können Sie die Größe eines vorhandenen Clusters von sechs auf acht Knoten erhöhen und die Clustergröße von acht auf sechs Knoten verringern.
+
+Die folgenden Clustererweiterungen und -kontraktionen werden nicht unterstützt:
+
+* Erweiterungen von Clustern mit einem, zwei oder vier Knoten auf Cluster mit sechs oder acht Knoten.
+* Kontraktionen von Clustern mit sechs oder acht Knoten auf Cluster mit einem, zwei oder vier Knoten.
+
+
+[NOTE]
+====
+Um die Anzahl der Knoten in einem Cluster auf eine Größe zu ändern, die durch die Clustererweiterung oder -verkleinerung nicht unterstützt wird, müssen Sie die folgenden Aufgaben ausführen:
+
+. Stellen Sie einen neuen Cluster mit mehreren Knoten bereit, indem Sie den link:task_cli_deploy_cluster.html["Befehlszeilenschnittstelle (CLI)"] oder die link:task_deploy_cluster.html["Web-Benutzeroberfläche"] wird mit dem Verwaltungsdienstprogramm ONTAP Select Deploy bereitgestellt.
+. Migrieren Sie die Daten gegebenenfalls in den neuen Cluster, indem Sie link:https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-disaster-recovery-concept.html["SnapMirror -Replikation"^] .
+
+
+====
+Sie initiieren die Verfahren zur Clustererweiterung und -kontraktion von ONTAP Select Deploy über die CLI, API oder Weboberfläche.
+
+
+
+== Überlegungen zu Hardware und Speicher
+
+Die Funktionen zur Clustererweiterung und -kontraktion sind auf folgende Weise eingeschränkt:
+
+* Die Unterstützung ist auf Cluster beschränkt, die auf ESX-Hypervisor-Hosts erstellt wurden. Die folgenden ESX-Versionen sind mit ONTAP Select 9.15.1 und höher kompatibel:
++
+** ESXi 8.0 U3
+** ESXi 8.0 U2
+** ESXi 8.0 U1
+** ESXi 8.0 GA
+** ESXi 7.0 U3
+** ESXi 7.0
+
+
+
+
+
+
+== Erweitern Sie den Cluster
+
+Mit der Cluster-Erweiterungsfunktion können Sie die Größe eines vorhandenen Clusters von einem Sechs-Knoten-Cluster auf einen Acht-Knoten-Cluster erhöhen.
+
+.Informationen zu diesem Vorgang
+Zur Vorbereitung der Clustererweiterung werden neue ESX-Hosts zum Inventar hinzugefügt und die Details der neuen Knoten zugewiesen. Vor dem Start der Clustererweiterung wird das ausgewählte interne Netzwerk durch eine Netzwerkvorprüfung überprüft.
+
+.Bevor Sie beginnen
+* Wenn Sie einen Cluster mit mehreren Knoten bereitstellen, sollten Sie mit der Netzwerkkonnektivitätsprüfung vertraut sein. Sie können die Netzwerkkonnektivitätsprüfung mithilfe des link:task_adm_connectivity.html["Web-Benutzeroberfläche"] oder die link:task_cli_connectivity.html["Befehlszeilenschnittstelle (CLI)"] .
+* Stellen Sie sicher, dass Sie über die Lizenzdetails für die neuen Knoten verfügen.
+
+
+.Schritte
+. Sign in mit dem Administratorkonto bei der Web-Benutzeroberfläche des Bereitstellungsdienstprogramms an.
+. Wählen Sie oben auf der Seite die Registerkarte *Cluster* und wählen Sie den gewünschten Cluster aus der Liste aus.
+. Wählen Sie auf der Clusterdetailseite das Zahnradsymbol rechts auf der Seite und dann *Cluster erweitern* aus.
+. Navigieren Sie zum Abschnitt *HA-Paar 4*.
+. Wählen Sie die Konfigurationsdetails für das Hochverfügbarkeitspaar (HA) für das vierte HA-Paar aus, einschließlich:
++
+** Instanztyp
+** Knotennamen
+** Zugehörige Hypervisor-Hosts
+** Knoten-IP-Adressen
+** Lizenzen
+** Netzwerkkonfiguration
+** Speicherkonfiguration (RAID-Typ und Speicherpools)
+
+
+. Wählen Sie *HA-Paar speichern*, um die Konfigurationsdetails zu speichern.
+. Geben Sie die ONTAP -Anmeldeinformationen ein und wählen Sie dann *Cluster erweitern*.
+. Wählen Sie *Weiter* und führen Sie die Netzwerkvorprüfung durch Auswahl von *Ausführen* aus.
++
+Die Netzwerkvorprüfung bestätigt, dass das für den ONTAP Clusterverkehr ausgewählte interne Netzwerk ordnungsgemäß funktioniert.
+
+. Wählen Sie *Cluster erweitern*, um den Clustererweiterungsprozess zu starten, und wählen Sie dann im Dialogfeld *OK*.
++
+Die Erweiterung des Clusters kann bis zu 45 Minuten dauern.
+
+. Überwachen Sie den mehrstufigen Clustererweiterungsprozess, um zu bestätigen, dass die Clustererweiterung erfolgreich war.
+. Auf der Registerkarte *Ereignisse* finden Sie regelmäßige Updates zum Fortschritt der Operation. Die Seite wird in regelmäßigen Abständen automatisch aktualisiert.
+
+
+.Nach Abschluss
+Nach der Erweiterung des Clusters sollten Sie die ONTAP Select Deploy-Konfigurationsdaten sichern.
+
+
+
+== Kontrahieren Sie den Cluster
+
+Mit der Cluster-Kontraktionsfunktion können Sie die Größe eines vorhandenen Clusters von einem Acht-Knoten-Cluster auf einen Sechs-Knoten-Cluster reduzieren.
+
+.Informationen zu diesem Vorgang
+Das gewünschte HA-Knotenpaar im Cluster wird ausgewählt, um die Clusterkontraktion während des Verfahrens vorzubereiten.
+
+.Schritte
+. Sign in mit dem Administratorkonto bei der Web-Benutzeroberfläche des Bereitstellungsdienstprogramms an.
+. Wählen Sie oben auf der Seite die Registerkarte *Cluster* und wählen Sie den gewünschten Cluster aus der Liste aus.
+. Wählen Sie auf der Clusterdetailseite das Zahnradsymbol rechts auf der Seite und dann *Vertragscluster* aus.
+. Wählen Sie die HA-Paar-Konfigurationsdetails für jedes HA-Paar aus, das Sie entfernen möchten, und geben Sie die ONTAP Anmeldeinformationen ein. Wählen Sie dann *Vertragscluster* aus.
++
+Es kann bis zu 30 Minuten dauern, bis der Cluster kontrahiert ist.
+
+. Überwachen Sie den mehrstufigen Cluster-Kontraktionsprozess, um zu bestätigen, dass die Clusterkontraktion erfolgreich war.
+. Auf der Registerkarte *Ereignisse* finden Sie regelmäßige Updates zum Fortschritt der Operation. Die Seite wird in regelmäßigen Abständen automatisch aktualisiert.
+

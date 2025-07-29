@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: task_cli_upgrade_deploy.html 
+keywords: administer, administering, cli, deploy, upgrade deploy 
+summary: Sie können eine vorhandene virtuelle Maschine des Bereitstellungsdienstprogramms direkt über die Befehlszeilenschnittstelle aktualisieren. 
+---
+= Upgrade einer ONTAP Select Deploy-Instanz
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können eine vorhandene virtuelle Maschine des Bereitstellungsdienstprogramms direkt über die Befehlszeilenschnittstelle aktualisieren.
+
+
+
+== Bevor Sie beginnen
+
+Stellen Sie sicher, dass Deploy während des Upgrades nicht für andere Aufgaben verwendet wird. Informationen und Einschränkungen zum Upgrade des Deploy-Dienstprogramms finden Sie in den aktuellen Versionshinweisen.
+
+
+NOTE: Wenn Sie eine ältere Instanz des ONTAP Select Deploy-Verwaltungsprogramms installiert haben, sollten Sie auf die aktuelle Version aktualisieren. Der ONTAP Select Knoten und die ONTAP Select Deploy-Komponente werden unabhängig voneinander aktualisiert. Siehe link:concept_adm_upgrading_nodes.html["Upgrade der ONTAP Select Knoten"^] für weitere Details.
+
+
+
+== Laden Sie das Upgrade-Paket herunter
+
+Um den Upgrade-Vorgang zu starten, müssen Sie die entsprechende Upgrade-Datei für die virtuelle Maschine von der NetApp Support-Site herunterladen. Das Upgrade-Paket ist als einzelne komprimierte Datei formatiert.
+
+.Schritte
+. Zugriff auf die link:https://mysupport.netapp.com/site/["NetApp Support Site"^] Verwenden Sie einen Webbrowser und wählen Sie *Downloads* aus dem Download-Menü.
+. Scrollen Sie nach unten und wählen Sie * ONTAP Select Deploy Upgrade*.
+. Wählen Sie die gewünschte Version des Upgrade-Pakets aus.
+. Lesen Sie die Endbenutzer-Lizenzvereinbarung (EULA) und wählen Sie *Akzeptieren und fortfahren*.
+. Wählen Sie das entsprechende Paket aus und laden Sie es herunter. Beantworten Sie dabei alle Eingabeaufforderungen entsprechend Ihrer Umgebung.
+
+
+
+
+== Laden Sie das Paket auf die virtuelle Bereitstellungsmaschine hoch
+
+Nachdem Sie das Upgrade-Paket erworben haben, müssen Sie die Datei auf die virtuelle Bereitstellungsmaschine hochladen.
+
+.Bevor Sie beginnen
+Die Upgrade-Datei muss auf Ihrer lokalen Arbeitsstation verfügbar sein. Außerdem benötigen Sie das Kennwort für das Administrator-Benutzerkonto.
+
+.Über diese Aufgaben
+In dieser Aufgabe wird eine Methode zum Hochladen der Datei auf die virtuelle Deploy-Maschine beschrieben. Möglicherweise gibt es andere Optionen, die für Ihre Umgebung besser geeignet sind.
+
+.Schritte
+. Verwenden Sie in einer Befehlsshell auf Ihrer lokalen Arbeitsstation das Dienstprogramm scp, um die Image-Datei auf die virtuelle Deploy-Maschine hochzuladen.
++
+Beispiel
+
++
+....
+scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide password when prompted)
+....
+
+
+.Ergebnis
+Die Upgrade-Datei wird im Home-Verzeichnis des Administratorbenutzers gespeichert.
+
+
+
+== Anwenden des Upgrade-Pakets
+
+Nachdem die Upgrade-Datei auf die virtuelle Deploy-Maschine hochgeladen wurde, können Sie das Upgrade anwenden.
+
+.Bevor Sie beginnen
+Sie müssen wissen, in welchem Verzeichnis die Upgrade-Datei auf der virtuellen Maschine des Deploy-Dienstprogramms abgelegt wurde. Stellen Sie außerdem sicher, dass Deploy während der Upgrade-Durchführung nicht für andere Aufgaben verwendet wird.
+
+.Schritte
+. Sign in mit dem Administratorkonto per SSH bei der CLI des Bereitstellungsdienstprogramms an.
+. Führen Sie das Upgrade mit dem entsprechenden Verzeichnispfad und Dateinamen durch:
++
+`deploy upgrade -package-path FILEPATH`
+
++
+Beispiel
+
++
+....
+deploy upgrade -package-path /home/admin/ONTAPdeploy2.12_upgrade.tar.gz
+....
+
+
+.Nach Abschluss
+Bevor der Upgrade-Vorgang abgeschlossen wird, werden Sie aufgefordert, eine Sicherungskopie der Deploy-Konfiguration der virtuellen Maschine zu erstellen. Außerdem sollten Sie den Browser-Cache leeren, damit Sie die neu erstellten Deploy-Seiten anzeigen können.
