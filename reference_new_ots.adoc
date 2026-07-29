@@ -19,6 +19,7 @@ Informieren Sie sich über die neuen Funktionen und Verbesserungen in unterstüt
 
 
 
+[[ontap-select-9-16-1]]
 == ONTAP Select 9.16.1
 
 ONTAP Select 9.16.1 enthält mehrere neue Funktionen und Verbesserungen.
@@ -36,6 +37,7 @@ Aktualisierte KVM-Hypervisor-Unterstützung:: Ab ONTAP Select 9.16.1 wird der Ke
 
 
 
+[[ontap-select-9-15-1]]
 == ONTAP Select 9.15.1
 
 ONTAP Select 9.15.1 enthält mehrere neue Funktionen und Verbesserungen.
@@ -62,6 +64,7 @@ NOTE: Die Unterstützung für die Clustererweiterung und -kontraktion ist nur au
 
 
 
+[[ontap-select-9-14-1]]
 == ONTAP Select 9.14.1
 
 ONTAP Select 9.14.1 enthält mehrere neue Funktionen und Verbesserungen.
@@ -74,6 +77,7 @@ Verbesserte VMware ESXi-Unterstützung:: ONTAP Select 9.14.1 umfasst Unterstütz
 
 
 
+[[ontap-select-9-13-1]]
 == ONTAP Select 9.13.1
 
 ONTAP Select 9.13.1 enthält mehrere neue Funktionen und Verbesserungen.
@@ -85,6 +89,7 @@ Aktualisierte ONTAP Select Deploy-Unterstützung:: Ab April 2024 ist ONTAP Selec
 
 
 
+[[ontap-select-9-12-1]]
 == ONTAP Select 9.12.1
 
 ONTAP Select 9.12.1 profitiert von den meisten Neuerungen der aktuellen Version des ONTAP Kernprodukts. Es enthält keine neuen Funktionen oder Verbesserungen, die speziell für ONTAP Select gelten.
@@ -93,6 +98,7 @@ Ab April 2024 ist ONTAP Select Deploy 9.12.1 nicht mehr auf der NetApp Support-S
 
 
 
+[[ontap-select-9-11-1]]
 == ONTAP Select 9.11.1
 
 ONTAP Select 9.11.1 enthält mehrere neue Funktionen und Verbesserungen.
@@ -123,6 +129,7 @@ NetApp empfiehlt Kunden dringend, eine vollständige Datenmigration von ONTAP Se
 
 
 
+[[ontap-select-9-10-1]]
 == ONTAP Select 9.10.1
 
 ONTAP Select 9.10.1 enthält mehrere neue Funktionen und Verbesserungen.
@@ -150,6 +157,7 @@ KVM-Hypervisor wird nicht mehr unterstützt:: Ab ONTAP Select 9.10.1 können Sie
 
 
 
+[[ontap-select-9-9-1]]
 == ONTAP Select 9.9.1
 
 ONTAP Select 9.9.1 enthält mehrere neue Funktionen und Verbesserungen.
@@ -167,6 +175,7 @@ Aktualisierte VMware ESXi-Unterstützung:: Die Unterstützung für VMware ESXi w
 
 
 
+[[ontap-select-9-8]]
 == ONTAP Select 9.8
 
 ONTAP Select 9.8 enthält mehrere neue und geänderte Funktionen.

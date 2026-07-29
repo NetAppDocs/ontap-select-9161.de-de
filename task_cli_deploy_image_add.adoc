@@ -18,6 +18,7 @@ Sie können ein ONTAP Select-Image zu Ihrer Instanz des Deploy-Verwaltungsprogra
 
 
 
+[[before-you-begin]]
 == Bevor Sie beginnen
 
 Auf hoher Ebene besteht der Prozess zum Hinzufügen eines ONTAP Select-Images zu einer Deploy-Instanz aus vier Schritten:
@@ -35,6 +36,7 @@ NOTE: Sie sollten nur ein ONTAP Select Image mit einer Version hinzufügen, die 
 
 
 
+[[download-the-install-image]]
 == Laden Sie das Installationsabbild herunter
 
 Um ein ONTAP Select Image zu einer Instanz des Deploy-Dienstprogramms hinzuzufügen, müssen Sie das Installationsimage von der NetApp Support-Site herunterladen. Das ONTAP Select Installationsimage ist als einzelne komprimierte Datei formatiert.
@@ -52,6 +54,7 @@ Um ein ONTAP Select Image zu einer Instanz des Deploy-Dienstprogramms hinzuzufü
 
 
 
+[[upload-the-install-image-to-deploy]]
 == Laden Sie das Installationsabbild zu Deploy hoch
 
 Nachdem Sie das ONTAP Select Installationsimage erworben haben, müssen Sie die Datei auf die virtuelle Deploy-Maschine hochladen.
@@ -87,6 +90,7 @@ Die Knoteninstallationsdatei wird im Home-Verzeichnis des Administratorbenutzers
 
 
 
+[[add-the-install-image]]
 == Fügen Sie das Installationsabbild hinzu
 
 Sie können das ONTAP Select Installationsabbild dem Verzeichnis Deploy images hinzufügen, sodass es bei der Bereitstellung eines neuen Clusters verfügbar ist.
@@ -109,6 +113,7 @@ Beispiel
 
 
 
+[[display-the-available-install-images]]
 == Die verfügbaren Installationsabbilder anzeigen
 
 Sie können die ONTAP Select Images anzeigen, die beim Bereitstellen eines neuen Clusters verfügbar sind.

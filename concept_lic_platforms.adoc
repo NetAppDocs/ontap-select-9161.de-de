@@ -18,6 +18,7 @@ Sie können eine ONTAP Select Capacity Tier- oder Capacity Pool-Lizenz in den St
 
 
 
+[[what-a-platform-license-offering-provides]]
 == Was ein Plattformlizenzangebot bietet
 
 Ein bestimmtes Lizenzangebot definiert und beschränkt die Funktionen des Hypervisor-Hosts in zwei Bereichen:
@@ -30,12 +31,14 @@ Die Lizenzangebote sind nach aufsteigendem Funktionsumfang von Standard bis Prem
 
 
 
+[[platform-license-offerings]]
 == Plattformlizenzangebote
 
 Es sind drei Plattformlizenzangebote verfügbar.
 
 
 
+[[standard]]
 === Standard
 
 Das Standardangebot bietet die folgenden Funktionen:
@@ -48,6 +51,7 @@ Das Standardangebot bietet die folgenden Funktionen:
 
 
 
+[[premium]]
 === Prämie
 
 Das Premium-Angebot bietet die folgenden Funktionen:
@@ -61,6 +65,7 @@ Das Premium-Angebot bietet die folgenden Funktionen:
 
 
 
+[[premium-xl]]
 === Premium XL
 
 Das Premium-XL-Angebot bietet die folgenden Funktionen:
@@ -77,6 +82,7 @@ NOTE: Die Verwendung des großen Instanztyps oder von NVMe-Laufwerken in einer S
 
 
 
+[[compare-hardware-support-for-platform-license-offerings]]
 == Vergleichen Sie den Hardware-Support für Plattformlizenzangebote
 
 Die Lizenzen Standard, Premium und Premium XL unterstützen eine breite Palette an Hardware und Software. Aktuelle Informationen zu Hardware- und Softwareversionen finden Sie im link:https://mysupport.netapp.com/matrix/["Interoperabilitätsmatrix-Tool"^] .

@@ -19,13 +19,13 @@ Sie können mithilfe einer OVF-Vorlage auf VMware ESXi schnell eine 90-Tage-Eval
 .Informationen zu diesem Vorgang
 * Sie müssen weder eine Seriennummer noch eine Speicherkapazitätslizenz von NetApp erwerben.
 * Sie können dieselbe Speichermenge für Benutzerdaten zuweisen wie bei einer erworbenen Lizenz.
-* Sie können den Knoten nicht von einer Evaluierungslizenz auf eine gekaufte Lizenz aktualisieren.
 * Sie können zum Bereitstellen der OVF-Vorlage nur ein vCenter-Konto verwenden. Die direkte Installation auf einem ESXi-Host wird derzeit nicht unterstützt.
 * Sie müssen die OVF-Vorlage (in einer OVA-Datei enthalten) mit dem vSphere-Standalone-Client oder dem vSphere-Webclient installieren (die einzige Option für ESXi 6.5 und höher). Sie verwenden nicht das Verwaltungsdienstprogramm ONTAP Select Deploy.
 
 
 
 
+[[prepare-the-ontap-select-cluster-host]]
 == Vorbereiten des ONTAP Select Clusterhosts
 
 Verwenden Sie die folgenden Anforderungen, um den ESXi-Host vorzubereiten, auf dem der ONTAP Select Cluster bereitgestellt wird. Die Plattformbeschreibung basiert auf der Konfiguration des Standard- oder kleinen Instanztyps mit lokalem Direct Attached Storage (DAS), formatiert mit dem Dateisystem VMFS-5 oder VMFS-6.
@@ -36,6 +36,7 @@ Weitere Informationen zu Host-Konfigurationsoptionen finden Sie im link:esxi-hos
 
 
 
+[[deploy-a-single-node-ontap-select-cluster-using-an-ovf-template]]
 == Bereitstellen eines ONTAP Select Clusters mit einem einzelnen Knoten mithilfe einer OVF-Vorlage
 
 Führen Sie die folgenden Schritte auf einem unterstützten 64-Bit-ESXi-Hostserver aus.

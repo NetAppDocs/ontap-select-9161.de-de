@@ -35,6 +35,7 @@ Sie initiieren die Verfahren zur Clustererweiterung und -kontraktion von ONTAP S
 
 
 
+[[hardware-and-storage-considerations]]
 == Überlegungen zu Hardware und Speicher
 
 Die Funktionen zur Clustererweiterung und -kontraktion sind auf folgende Weise eingeschränkt:
@@ -53,6 +54,7 @@ Die Funktionen zur Clustererweiterung und -kontraktion sind auf folgende Weise e
 
 
 
+[[expand-the-cluster]]
 == Erweitern Sie den Cluster
 
 Mit der Cluster-Erweiterungsfunktion können Sie die Größe eines vorhandenen Clusters von einem Sechs-Knoten-Cluster auf einen Acht-Knoten-Cluster erhöhen.
@@ -100,6 +102,7 @@ Nach der Erweiterung des Clusters sollten Sie die ONTAP Select Deploy-Konfigurat
 
 
 
+[[contract-the-cluster]]
 == Kontrahieren Sie den Cluster
 
 Mit der Cluster-Kontraktionsfunktion können Sie die Größe eines vorhandenen Clusters von einem Acht-Knoten-Cluster auf einen Sechs-Knoten-Cluster reduzieren.

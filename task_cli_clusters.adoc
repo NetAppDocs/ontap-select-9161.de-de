@@ -18,6 +18,7 @@ Zur Verwaltung eines ONTAP Select Clusters können Sie mehrere verwandte Aufgabe
 
 
 
+[[delete-an-ontap-select-clusters]]
 == Löschen eines ONTAP Select Clusters
 
 Sie können einen ONTAP Select Cluster über die Befehlszeilenschnittstelle löschen, wenn er nicht mehr benötigt wird.

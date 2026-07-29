@@ -18,6 +18,7 @@ Wenn Sie ONTAP Select auf VMware ESXi ausführen, können Sie die ESXi-Software 
 
 
 
+[[before-you-begin]]
 == Bevor Sie beginnen
 
 Bevor Sie die ESXi-Software auf den Hypervisoren aktualisieren, die einen ONTAP Select Cluster hosten, sollten Sie das für Ihre Umgebung geeignete Upgrade-Verfahren vorbereiten und auswählen.
@@ -27,12 +28,14 @@ CAUTION: Wenn Sie auf VMware ESXi 6.5 aktualisieren, sollten Sie auf ESXi U2 (Bu
 
 
 
+[[become-familiar-with-how-to-upgrade-vmware-esxi]]
 === Machen Sie sich mit dem Upgrade von VMware ESXi vertraut
 
 Das Upgrade der ESXi-Software ist ein von VMware beschriebener und unterstützter Prozess. Der Hypervisor-Upgrade-Prozess ist Teil des größeren Upgrade-Vorgangs bei Verwendung von ONTAP Select. Weitere Informationen finden Sie in der VMware-Dokumentation.
 
 
 
+[[select-an-upgrade-procedure]]
 === Wählen Sie ein Upgrade-Verfahren aus
 
 Es stehen mehrere Upgrade-Verfahren zur Verfügung. Wählen Sie das passende Verfahren anhand der folgenden Kriterien aus:
@@ -50,18 +53,21 @@ Wenn Sie diese früheren Versionen verwenden und ein Upgrade versuchen, kann die
 
 
 
+[[upgrade-the-deploy-administration-utility]]
 === Aktualisieren Sie das Deploy-Verwaltungsdienstprogramm
 
 Bevor Sie ein Upgrade mit dem Deploy-Dienstprogramm durchführen, müssen Sie möglicherweise Ihre Deploy-Instanz aktualisieren. Im Allgemeinen sollten Sie auf die neueste Version von Deploy aktualisieren. Das Deploy-Dienstprogramm muss die von Ihnen verwendete Version von ONTAP Select unterstützen. Weitere Informationen finden Sie in den Versionshinweisen zu ONTAP Select .
 
 
 
+[[after-the-update-procedure-is-complete]]
 === Nach Abschluss des Update-Vorgangs
 
 Wenn Sie ein Upgrade-Verfahren mit dem Deploy-Dienstprogramm auswählen, sollten Sie nach der Aktualisierung aller Knoten eine Cluster-Aktualisierung mit Deploy durchführen. Weitere Informationen finden Sie unter Aktualisieren der Deploy-Cluster-Konfiguration.
 
 
 
+[[upgrade-a-single-node-cluster-using-deploy]]
 == Aktualisieren eines Einzelknotenclusters mithilfe von „Deploy“
 
 Sie können das Verwaltungsdienstprogramm „Deploy“ als Teil des Verfahrens zum Upgrade des VMware ESXi-Hypervisors verwenden, der einen ONTAP Select -Einzelknotencluster hostet.
@@ -97,6 +103,7 @@ Sie sollten mit dem Verwaltungsdienstprogramm „Deploy“ eine Clusteraktualisi
 
 
 
+[[upgrade-a-multi-node-cluster-using-deploy]]
 == Aktualisieren Sie einen Cluster mit mehreren Knoten mithilfe von „Deploy“
 
 Sie können das Verwaltungsdienstprogramm „Deploy“ als Teil des Verfahrens zum Upgrade der VMware ESXi-Hypervisoren verwenden, die einen ONTAP Select -Cluster mit mehreren Knoten hosten.
@@ -147,6 +154,7 @@ Sie müssen das Upgrade für jeden Host im ONTAP Select Cluster durchführen. Na
 
 
 
+[[upgrade-a-single-node-cluster-without-deploy]]
 == Upgrade eines Einzelknotenclusters ohne Bereitstellung
 
 Sie können den VMware ESXi-Hypervisor, der einen ONTAP Select Einzelknotencluster hostet, aktualisieren, ohne das Deploy-Verwaltungsprogramm zu verwenden.
@@ -182,6 +190,7 @@ Sie sollten mit dem Verwaltungsdienstprogramm „Deploy“ eine Clusteraktualisi
 
 
 
+[[upgrade-a-multi-node-cluster-without-deploy]]
 == Aktualisieren Sie einen Cluster mit mehreren Knoten ohne Bereitstellung
 
 Sie können die VMware ESXi-Hypervisoren, die einen ONTAP Select -Cluster mit mehreren Knoten hosten, aktualisieren, ohne das Deploy-Verwaltungsprogramm zu verwenden.

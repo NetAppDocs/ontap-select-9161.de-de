@@ -18,6 +18,7 @@ Sie können eine vorhandene virtuelle Maschine des Bereitstellungsdienstprogramm
 
 
 
+[[before-you-begin]]
 == Bevor Sie beginnen
 
 Stellen Sie sicher, dass Deploy während des Upgrades nicht für andere Aufgaben verwendet wird. Sie sollten die aktuellen Versionshinweise einsehen, um Informationen und Einschränkungen zum Upgrade des Deploy-Dienstprogramms zu erhalten.
@@ -27,6 +28,7 @@ NOTE: Wenn Sie eine ältere Instanz des ONTAP Select Deploy-Verwaltungsprogramms
 
 
 
+[[download-the-upgrade-package]]
 == Laden Sie das Upgrade-Paket herunter
 
 Um den Aktualisierungsprozess zu starten, müssen Sie die entsprechende Upgrade-Datei für die Deploy-virtuelle Maschine von der NetApp Support Site herunterladen. Das Upgrade-Paket ist als einzelne komprimierte Datei formatiert.
@@ -41,6 +43,7 @@ Um den Aktualisierungsprozess zu starten, müssen Sie die entsprechende Upgrade-
 
 
 
+[[upload-the-package-to-the-deploy-virtual-machine]]
 == Laden Sie das Paket auf die virtuelle Maschine Deploy hoch
 
 Nach dem Erwerb des Upgrade-Pakets müssen Sie die Datei auf die Deploy-virtuelle Maschine hochladen.
@@ -67,6 +70,7 @@ Die Upgrade-Datei wird im Home-Verzeichnis des Administratorbenutzers gespeicher
 
 
 
+[[apply-the-upgrade-package]]
 == Wenden Sie das Upgrade-Paket an
 
 Nachdem die Upgrade-Datei auf die Deploy-virtuelle Maschine hochgeladen wurde, können Sie das Upgrade anwenden.

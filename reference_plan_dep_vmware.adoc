@@ -21,6 +21,7 @@ CAUTION: Sie sollten die Konfiguration einer virtuellen ONTAP Select Maschine ni
 
 
 
+[[hypervisor-independent]]
 == Hypervisor-unabhängig
 
 Sowohl ONTAP Select als auch das Verwaltungsdienstprogramm ONTAP Select Deploy sind Hypervisor-unabhängig.
@@ -64,6 +65,7 @@ Sie können einen ONTAP Select Knoten nicht direkt zu einem hardwarebasierten ON
 
 
 
+[[vmware-hypervisor-environment]]
 == VMware-Hypervisor-Umgebung
 
 Es gibt mehrere Anforderungen und Einschränkungen, die speziell für die VMware-Umgebung gelten und die Sie berücksichtigen sollten, bevor Sie das Dienstprogramm ONTAP Select Deploy in einer VMware-Umgebung installieren.
