@@ -214,6 +214,6 @@ Wenn Sie die Kapazitätspool-Lizenzierung verwenden, müssen Sie jede Kapazität
 
 .Ähnliche Informationen
 * link:task_install_deploy.html["Installieren Sie ONTAP Select Deploy"]
-* link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine["Stellen Sie die Bereitstellungskonfigurationsdaten auf der neuen virtuellen Maschine wieder her"]
-* link:task_adm_licenses.html#reinstalling-a-capacity-pool-license["Neuinstallieren einer Capacity Pool-Lizenz"]
+* link:task_cli_migrate_deploy.html#restore-the-deploy-configuration-data-to-the-new-virtual-machine["Stellen Sie die Bereitstellungskonfigurationsdaten auf der neuen virtuellen Maschine wieder her"]
+* link:task_adm_licenses.html#reinstall-a-capacity-pool-license["Neuinstallieren einer Capacity Pool-Lizenz"]
 
